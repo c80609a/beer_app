@@ -40,13 +40,13 @@ guard 'zeus' do
   rails.views_n_layouts = /^app\/(.+(?:\.erb|\.haml|\.slim))$/
   rails.controllers = %r{^app/controllers/(.+)_controller\.rb$}
 
-  watch(rails.app_files) { |m| rspec.spec.call(m[1]) }
-  watch(rails.views_n_layouts) { |m| rspec.spec.call(m[1]) }
+  # watch(rails.app_files) { |m| rspec.spec.call(m[1]) }
+  # watch(rails.views_n_layouts) { |m| rspec.spec.call(m[1]) }
   watch(rails.controllers) do |m|
     [
-      rspec.spec.call("routing/#{m[1]}_routing"),
+      # rspec.spec.call("routing/#{m[1]}_routing"),
       rspec.spec.call("controllers/#{m[1]}_controller"),
-      rspec.spec.call("acceptance/#{m[1]}")
+      # rspec.spec.call("acceptance/#{m[1]}")
     ]
   end
 
