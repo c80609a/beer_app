@@ -45,6 +45,7 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-zeus'
+  gem 'factory_girl_rails'
 end
 
 group :development do
